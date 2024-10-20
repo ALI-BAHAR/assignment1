@@ -10,7 +10,7 @@ Operational Structure
 •	Evaluate the model: The model’s performance is measured using evaluation metrics such as precision, recall, and F1-score.
 •	Classify new texts: A function is implemented to classify new, unseen texts.
 Technologies Used
-•	Python
+•	 Python
 •	Scikit-learn
 •	Wikipedia API
 •	Naive Bayes Classifier
