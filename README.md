@@ -1,7 +1,8 @@
 # assignment1
 Text Classification using Wikipedia: Coffee vs. Non-Coffee
 Description
-This project classifies a given text as either coffee-related or non-coffee-related by using Wikipedia articles as the source of data. The classification is done using Python with the Scikit-learn library and the Wikipedia API.
+This project classifies a given text as either coffee-related or non-coffee-related by using Wikipedia articles as the source of data. 
+The classification is done using Python with the Scikit-learn library and the Wikipedia API.
 Operational Structure
 •	Fetch text data from Wikipedia: Coffee-related and non-coffee-related texts are gathered from Wikipedia using the Wikipedia API.
 •	Preprocess the text data: This involves text tokenization and feature extraction using TF-IDF.
