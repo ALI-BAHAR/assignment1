@@ -1,4 +1,4 @@
-# Assignment1
+# Assignment1.py
 
 ## Text Classification using Wikipedia: Coffee vs. Non-Coffee
 
