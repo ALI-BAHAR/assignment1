@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 #Function to retrieve the text of a Wikipedia page using a custom user-agent
 def fetch_wikipedia_page(title):
     try:
-        #using the user-agent to avoid blocking from Wikipedia
+        #using the user-agent to avoid blocking from Wikipedia#
         user_agent = "your-unique-user-agent"
         headers = {
             'User-Agent': user_agent
@@ -45,12 +45,12 @@ def fetch_wikipedia_page(title):
         logging.error(f"An error occurred while fetching the page '{title}': {str(e)}")
         return ""
 
-# Function to prepare and fetch data
+#Function to prepare and fetch data#
 def collect_data():
-    # Sample Of coffee-related topics
+    #Sample Of coffee-related topics#
     coffee_titles = ["Coffee", "Coffee production", "Coffee bean", "Arabica coffee"]
 
-    # Sample Of non-coffee-related topics
+    #Sample Of non-coffee-related topics#
     non_coffee_titles = ["Paris", "Photosynthesis", "Quantum Mechanics", "Shakespeare"]
 
     coffee_texts = [fetch_wikipedia_page(title) for title in coffee_titles]
@@ -62,15 +62,15 @@ def collect_data():
 
     return texts, labels
 
-# Function to train the model
+#Function to train the model#
 def train_model(texts, labels):
     # Split the dataset into training and test sets
     X_train, X_test, y_train, y_test = train_test_split(texts, labels, test_size=0.2, random_state=42)
 
-    # Create a pipeline that combines TfidfVectorizer and Naive Bayes classifier
+    #Create a pipeline that combines TfidfVectorizer and Naive Bayes classifier#
     model = make_pipeline(TfidfVectorizer(), MultinomialNB())
 
-    # Train the model
+    #Train the model#
     model.fit(X_train, y_train)
 
     # Evaluate the model on the test set
@@ -85,12 +85,12 @@ def train_model(texts, labels):
 def classify_text(model, text):
     return model.predict([text])[0]
 
-# Main function to execute the pipeline
+#Main function to execute the pipeline#
 def main():
     #Collecting data from Wikipedia
     texts, labels = collect_data()
 
-    #Training the model
+    #Training the model#
     model = train_model(texts, labels)
 
     #Classifying new text
